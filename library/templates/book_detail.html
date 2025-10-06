@@ -1,0 +1,18 @@
+{%extends 'library/base.html'%}
+{%block content%}
+<h2>{{book.title}}</h2>
+<div class='book_details'>
+    <p><strong>Book Author</strong>{{book.author}}</p>
+    <p><strong>Book ISBN</strong>{{book.isbn}}</p>
+    <p><strong>Genre</strong>{{book.genre}}</p>
+    <p><strong>Status</strong>
+    {% if book.available %}
+    Available for borrowing
+    {% else %}
+    Out
+    {% endif %}
+          
+</p>
+</div>
+<a href="{% url 'book_list' %}">Back to All Books</a>
+{% endblock %}

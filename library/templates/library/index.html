@@ -1,0 +1,16 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+    <h2>Welcome to my Library</h2>
+    <div class='stats'>
+        <p>Total Books:{{total_books}}</p>
+        <p>Total Authors:{{total_authors}}</p>
+        <p>Available Books:{{available_books}}</p>
+    </div>
+    <div class="quick_actions">
+        <h3>Quick Actions</h3>
+        <ul>
+            <li><a href="{% url 'book_list' %}"> Show all Books</a></li>
+        </ul>
+    </div>
+{% endblock %}
